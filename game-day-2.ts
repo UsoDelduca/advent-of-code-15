@@ -28,10 +28,14 @@ const arrSum = (arr: number[]) => arr.reduce((sum, curr) => sum + curr, 0)
 console.log(arrSum(dimensions))
 
 // PART 2 //
-const perimeterArr: any[] = []
+const dimensionsArr: any[] = []
+const ribbonArr: number[] = []
 input.map((perimeter) => {
   const [length, width, height] = perimeter.split('x')
-  perimeterArr.push([Number(length), Number(width), Number(height)])
+  dimensionsArr.push([Number(length), Number(width), Number(height)])
+  ribbonArr.push(Number(length), Number(width), Number(height))
 })
+// TOTAL for Ribbons
+console.log(ribbonArr.reduce((sum: number, curr: number) => sum + curr))
 
-console.log(perimeterArr)
+dimensionsArr.map((dimension) => {})
