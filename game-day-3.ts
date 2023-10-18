@@ -7,9 +7,10 @@ type Direction = {
   east: '>'
   west: '<'
 }
-const arr = input.split('')
 
-function location(coordinates: Direction[]) {
+const arr: any[] = input.split('')
+
+function location(coordinates: Direction[]): number[] {
   let [x, y] = [0, 0]
   coordinates.map((item: any) => {
     switch (item) {
@@ -28,6 +29,7 @@ function location(coordinates: Direction[]) {
       default:
         break
     }
+    console.log([x, y])
   })
   return [x, y]
 }
