@@ -26,3 +26,6 @@ After a few attempts and some console.logs I managed to get the rigth answer
 
 ## Day #2 (part 2)  
 
+After finding the ~right~ answer for the amount of bow length needed, I go stuck at finding the amount of ribbon  
+While browsing for something online, I realised I misread the instructions to how to find the length of bow needed  
+So, I went back to my previous solution and changed it to the ACTUAL right one  
