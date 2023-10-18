@@ -6,24 +6,10 @@ function calculate(length: number, width: number, height: number) {
   const lw = 2 * length * width
   const wh = 2 * width * height
   const hl = 2 * height * length
-  let smallest: number = 0
+  let smallest: number = Math.min(lw, wh, hl)
 
-  if (lw <= wh && lw <= hl) {
-    smallest = lw
-    return lw + wh + hl + smallest
-  }
-  if (wh <= lw && wh <= hl) {
-    smallest = wh
-    return lw + wh + hl + smallest
-  }
-  if (hl <= lw && hl <= wh) {
-    smallest = hl
-    return lw + wh + hl + smallest
-  }
   console.log('lwh', lw, wh, hl)
-  // const lW = 2 * lw
-  // const wH = 2 * wh
-  // const hL = 2 * hl
+
   return lw + wh + hl + smallest
 }
 
