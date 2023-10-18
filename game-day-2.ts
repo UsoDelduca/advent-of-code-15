@@ -32,14 +32,17 @@ console.log('GIFT WRAP TOTAL: ', arrSum(dimensions))
 let total = 0
 
 input.map((perimeter) => {
-  const [length, width, height] = perimeter.split('x').map((num) => +num)
+  // Iterate over the array
+  // Split the string when x is found
+  // Iterate over the arrays and converts strings into numbers
+  const [length, width, height] = perimeter.split('x').map((num) => Number(num))
+  // console.log(perimeter)
+  console.log('Length: ', length, 'Width: ', width, 'Height: ', height)
 
-  let maxValue = Math.max(Number(length), Number(width), Number(height))
-  let [min1 = maxValue, min2 = maxValue] = [
-    Number(length),
-    Number(width),
-    Number(height),
-  ].filter((value) => value != maxValue)
+  let maxValue = Math.max(length, width, height)
+  let [min1 = maxValue, min2 = maxValue] = [length, width, height].filter(
+    (value) => value != maxValue
+  )
 
   let bowSize = length * width * height
   let ribbonSize = min1 * 2 + min2 * 2
