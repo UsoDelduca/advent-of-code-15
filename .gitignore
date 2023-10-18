@@ -1,0 +1,9 @@
+/dist
+/node_modules
+
+package-lock.json
+tsconfig.json
+
+day2.txt
+
+app.ts
