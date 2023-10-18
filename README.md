@@ -18,6 +18,11 @@ The way I see it, the more I see the same errors on screen, the easier it will b
 The main issue was to figure out how to read the input  
 The logic wasn't that hard to figure out
 
-## Day #2
+## Day #2 (part 1)
 Again, the issues was to use the input data  
-It took me a little while to find a solution by reading a few forums
+It took me a little while to find a solution by reading a few forums  
+The logic was a bit simple, although I was multiplying by 2 at the wrong time  
+After a few attempts and some console.logs I managed to get the rigth answer
+
+## Day #2 (part 2)  
+
