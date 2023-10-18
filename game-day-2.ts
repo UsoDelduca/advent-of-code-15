@@ -25,17 +25,21 @@ input.map((dimension) => {
 // console.log('DIMENSIONS 2: ', dimensions[2])
 const arrSum = (arr: number[]) => arr.reduce((sum, curr) => sum + curr, 0)
 
-console.log(arrSum(dimensions))
+console.log('GIFT WRAP TOTAL: ', arrSum(dimensions))
 
 // PART 2 //
 const dimensionsArr: any[] = []
-const ribbonArr: number[] = []
+const bowArr: number[] = []
+
 input.map((perimeter) => {
   const [length, width, height] = perimeter.split('x')
   dimensionsArr.push([Number(length), Number(width), Number(height)])
-  ribbonArr.push(Number(length), Number(width), Number(height))
+  bowArr.push(Number(length), Number(width), Number(height))
 })
 // TOTAL for Ribbons
-console.log(ribbonArr.reduce((sum: number, curr: number) => sum + curr))
+console.log(
+  'TOTAL length for BOWS: ',
+  bowArr.reduce((sum: number, curr: number) => sum + curr)
+)
 
 dimensionsArr.map((dimension) => {})
