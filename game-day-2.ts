@@ -3,14 +3,14 @@ import fs from 'fs'
 const input = fs.readFileSync('day2.txt').toString().split('\n')
 
 function calculate(length: number, width: number, height: number) {
-  const lw = 2 * length * width
-  const wh = 2 * width * height
-  const hl = 2 * height * length
+  const lw = length * width
+  const wh = width * height
+  const hl = height * length
   let smallest: number = Math.min(lw, wh, hl)
 
   console.log('lwh', lw, wh, hl)
 
-  return lw + wh + hl + smallest
+  return 2 * lw + 2 * wh + 2 * hl + smallest
 }
 
 const dimensions: number[] = []
