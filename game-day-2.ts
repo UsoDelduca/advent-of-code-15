@@ -15,3 +15,7 @@ console.log(dimensions)
 function calculate(length: number, width: number, height: number) {
   return 2 * (length * width) + 2 * (width * height) + 2 * (height * length)
 }
+
+// function sumAll(arr: number[]){
+//   arr.reduce((sum, curr)=> {sum+curr, 0})
+// }
