@@ -18,9 +18,7 @@ const dimensions: number[] = []
 input.map((dimension) => {
   const [length, width, height] = dimension.split('x')
   // console.log([length, width, height])
-  dimensions.push(
-    calculate(parseInt(length), parseInt(width), parseInt(height))
-  )
+  dimensions.push(calculate(Number(length), Number(width), Number(height)))
 })
 console.log('DIMENSIONS 2: ', dimensions[2])
 const arrSum = (arr: number[]) => arr.reduce((sum, curr) => sum + curr, 0)
