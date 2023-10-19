@@ -12,9 +12,9 @@ type Direction = {
   west: '<'
 }
 
-const arr: Direction[] = input.split('') as any[]
+const arr: string[] = input.split('')
 
-function countHouses(input: Direction[]): number {
+function countHouses(input: string[]): number {
   let [x, y] = [0, 0]
 
   const visitedHouses = new Set<string>()
@@ -88,45 +88,88 @@ console.log(`Number of visited houses is: ${visitedHousesCount}`)
 
 // console.log(arr)
 
-function robotAndSanta(input: Direction[]): number {
+function robotAndSanta(input: string[]): number {
   const santaVisited = new Set<string>()
   const robotVisited = new Set<string>()
 
-  let x = 0
-  let y = 0
+  let [x1, y1] = [0, 0]
+  let [x2, y2] = [0, 0]
 
-  santaVisited.add(`${x}, ${y}`)
-  robotVisited.add(`${x}, ${y}`)
+  santaVisited.add(`${x1}, ${y1}`)
 
-  const move: Record<string, { x: number; y: number }> = {
-    '<': { x: -1, y: 0 }, // West
-    '>': { x: 1, y: 0 }, // East
-    v: { x: 0, y: -1 }, // South
-    '^': { x: 0, y: 1 }, // North
+  const directionMap: { [key: string]: [number, number] } = {
+    '^': [0, 1], // North
+    v: [0, -1], // South
+    '<': [-1, 0], // West
+    '>': [1, 0], // East
   }
 
-  for (const [idx, direction] of input.entries()) {
-    if (idx % 2 === 0) {
-      // Santa moves
-      if (move[idx]) {
-        x += move[idx].x
-        y += move[idx].y
-        santaVisited.add(`${x}, ${y}`)
-      }
-      console.log(`SANTA'S turn`, direction, idx)
-    }
-    if (idx % 2 != 0) {
-      //Robo-santa moves
-      if (move[idx]) {
-        x += move[idx].x
-        y += move[idx].y
-        robotVisited.add(`${x}, ${y}`)
-      }
-      console.log(`ROBOT-SANTA'S turn`, direction, idx)
+  for (let i = 0; i < input.length; i++) {
+    const direction = input[i]
+    const [dx, dy] = directionMap[direction]
+
+    if (i % 2 === 0) {
+      x1 += dx
+      y1 += dy
+      santaVisited.add(`${x1}, ${y1}`)
+    } else {
+      x2 += dx
+      y2 += dy
+      santaVisited.add(`${x2}, ${y2}`)
     }
   }
+  return santaVisited.size
 
-  return santaVisited.size + robotVisited.size
+  //   for (const [idx, direction] of input.entries()) {
+  //   if (idx % 2 === 0) {
+  //     // Santa moves
+  //     switch (direction) {
+  //       case '^' as any:
+  //         y++
+  //         break
+  //       case 'v' as any:
+  //         y--
+  //         break
+  //       case '<' as any:
+  //         x--
+  //         break
+  //       case '>' as any:
+  //         x++
+  //         break
+  //       default:
+  //         break
+  //     }
+  //     santaVisited.add(`${x}, ${y}`)
+  //     // console.log('SANTA: ', santaVisited)
+  //   }
+  //   // console.log(`SANTA'S turn`, direction, idx)
+  //   if (idx % 2 != 0) {
+  //     //Robo-santa moves
+  //     switch (direction) {
+  //       case '^' as any:
+  //         y++
+  //         break
+  //       case 'v' as any:
+  //         y--
+  //         break
+  //       case '<' as any:
+  //         x--
+  //         break
+  //       case '>' as any:
+  //         x++
+  //         break
+  //       default:
+  //         break
+  //     }
+  //     robotVisited.add(`${x}, ${y}`)
+  //   }
+  //   // console.log(`ROBOT-SANTA'S turn`, direction, idx)
+  // }
+  // console.log(santaVisited.size, robotVisited.size)
+  // return santaVisited.size + robotVisited.size
 }
 
-console.log(robotAndSanta(arr))
+console.log(
+  'The number of houses visited by Santa and Robot-Santa: ',
+  robotAndSanta(arr)
+)
