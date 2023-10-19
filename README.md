@@ -53,5 +53,7 @@ Realised I had to split the entries in two Sets
   
 Basically copied and pasted the previous code and added another Set and logic to see who was going where  
   
+Learned to 'force' an index in a for...of loop by using destructuring and array.entries() 
+  
 Got to a point where I have everything right, but don't know how to use the information I have (again) =/
 
