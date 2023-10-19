@@ -44,4 +44,14 @@ Learned to create a new Set<string>() (https://www.typescriptlang.org/docs/handb
 
 Also learned I can use Set.prototype.size to count how many unique elements are there in the Set  
 
+## Day #3 (part 2)  
+  
+Found an interesting video on YouTube that discuss the questions of an Advent of Code challenge/puzzle  
+https://www.youtube.com/playlist?list=PLsCiOxXcx144alYZBBYi62vg95RKvfbIk
+
+Realised I had to split the entries in two Sets  
+  
+Basically copied and pasted the previous code and added another Set and logic to see who was going where  
+  
+Got to a point where I have everything right, but don't know how to use the information I have (again) =/
 
