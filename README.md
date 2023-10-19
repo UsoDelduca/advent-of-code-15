@@ -32,10 +32,16 @@ So, I went back to my previous solution and changed it to the ACTUAL right one
   
 ## Day #3 (part 1)
 
-Got somewhere figuring out the positions  of [x,y] resulting in [41 , -95]
-Spent some time trying to figure out what to do with those coordenates
-Came across a github repo with a Javascript solution, but the code was hard to understand
-Asked chatgpt to explain and 'convert' to Typescript
-Learned to create a new Set<string>() (https://www.typescriptlang.org/docs/handbook/utility-types.html) and Set.prototype.add() (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add) unique elements to the new Set
-Also learned I can use Set.prototype.size to count how many unique elements are there in the Set
+Got somewhere figuring out the positions  of [x,y] resulting in [41 , -95]  
+
+Spent some time trying to figure out what to do with those coordenates  
+
+Came across a github repo with a Javascript solution, but the code was hard to understand  
+
+Asked chatgpt to explain and 'convert' to Typescript  
+
+Learned to create a new Set<string>() (https://www.typescriptlang.org/docs/handbook/utility-types.html) and Set.prototype.add() (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/add) unique elements to the new Set  
+
+Also learned I can use Set.prototype.size to count how many unique elements are there in the Set  
+
 
