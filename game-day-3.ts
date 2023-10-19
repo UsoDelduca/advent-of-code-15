@@ -39,9 +39,9 @@ function countHouses(input: Direction[]): number {
     visitedHouses.add(`${x}, ${y}`)
   }
 
+  console.log([x, y])
   return visitedHouses.size
 }
-
 console.log(countHouses(arr))
 
 // ChatGPT solution //
